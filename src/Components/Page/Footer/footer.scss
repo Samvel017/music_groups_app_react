@@ -1,0 +1,110 @@
+.footer {
+  background: #09010d;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  padding: 52px 0;
+  .footer-section {
+    max-width: 1170px;
+    margin: 0 auto;
+    .mail-input-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 20px;
+      }
+      .mail-input {
+        position: relative;
+        border: 0.5px solid #d0d0d0;
+        border-radius: 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 410px;
+        width: 100%;
+        height: 48px;
+        padding-left: 20px;
+        margin-bottom: 60px;
+        input {
+          background-color: #09010d;
+          color: #d0d0d0;
+          width: 100%;
+          border: none;
+          outline: none;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          margin-left: 15px;
+        }
+        .mail-send {
+          width: 59px;
+          height: 100%;
+          background: linear-gradient(90deg, #5d00fa 0%, #d70bca 100%);
+          border-radius: 48px;
+          font-size: 14px;
+          display: grid;
+          place-items: center;
+          cursor: pointer;
+        }
+      }
+    }
+    .footer-links {
+      display: flex;
+      justify-content: space-between;
+      section {
+        max-width: 238px;
+        width: 100%;
+        .social-icons {
+          display: flex;
+          grid-gap: 12px;
+          margin-top: 15px;
+          li {
+            width: 35px;
+            height: 35px;
+            border: 0.5px solid #d0d0d0;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+          }
+        }
+        .store-section {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          grid-gap: 15px;
+          img {
+            cursor: pointer;
+          }
+        }
+        strong {
+          font-weight: 400;
+        }
+        h4 {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 17px;
+          width: 100%;
+          padding-bottom: 9.5px;
+          letter-spacing: 0.7px;
+          border-bottom: 0.5px solid #d0d0d0;
+          margin-bottom: 16.5px;
+        }
+        .links {
+          display: flex;
+          flex-direction: column;
+          grid-gap: 8px;
+          color: #fff;
+          font-size: 14px;
+          line-height: 17px;
+          li {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
