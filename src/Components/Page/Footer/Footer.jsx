@@ -25,7 +25,7 @@ export default function Footer({user}) {
         <div className="footer-links">
           <section>
             <h4>CONNECT</h4>
-            <strong>{user.email}</strong>
+            <strong>{user.email || 'User Email'}</strong>
             <ul className="social-icons">
               <li>
                 <InstagramIcon fontSize='medium' />

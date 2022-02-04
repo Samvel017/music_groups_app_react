@@ -147,6 +147,12 @@
           font-size: 24px;
           color: #fff;
         }
+        a {
+          color: #fff;
+          padding: 7px 12px;
+          background-color: #5d00fa;
+          border-radius: 10px;
+        }
       }
     }
     .description-title {
@@ -159,4 +165,42 @@
       line-height: 22px;
     }
   }
+}
+
+.grouped-select {
+  .btn-tab {
+    color: #fff;
+  }
+  .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #5b00fb;
+  }
+  .css-1aquho2-MuiTabs-indicator {
+    background-color: #5b00fb;
+  }
+}
+.song-container {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  color: #fff;
+  padding: 35px 20px;
+  background-color: #101029;
+.song-info {
+  max-width: 1170px;
+  margin: 0 auto;
+  .back-btn {
+    color: #5d00fa;
+  }
+  .song-title {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .song {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    grid-gap: 10px;
+    h4 {
+      color: #5b00fb;
+    }
+  }
+}
 }

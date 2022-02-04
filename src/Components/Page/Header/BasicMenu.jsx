@@ -35,7 +35,7 @@ export default function BasicMenu({user}) {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem onClick={handleClose}>{user.nickname}</MenuItem>
+        <MenuItem onClick={handleClose}>{user.nickname || 'Username'}</MenuItem>
         <MenuItem onClick={handleClose}>My account</MenuItem>
         <MenuItem onClick={handleClose}><NavLink to='/'>Logout</NavLink></MenuItem>
       </Menu>

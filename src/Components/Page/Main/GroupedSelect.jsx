@@ -1,24 +1,39 @@
 import * as React from 'react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import ListSubheader from '@mui/material/ListSubheader';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import { NavLink } from 'react-router-dom';
 
-export default function GroupedSelect({albums, currentAlbumHandle, currentAlbum,setCurrentAlbum}) {
+const albumsTitle = ['The King of Limbs', 'OK Computer', 'Dummy', 'Third'];
+
+export default function GroupedSelect({
+  albums,
+  currentAlbumHandle,
+  currentAlbum,
+  setCurrentAlbum,
+}) {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
   return (
     <div className="grouped-select">
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel htmlFor="grouped-select">Grouping</InputLabel>
-        <Select defaultValue={albums[0]} id="grouped-select" label="Grouping" onChange={(e)=>{setCurrentAlbum(e.target.value)}}>
-          <ListSubheader>Radio Head</ListSubheader>
-          <MenuItem value={albums[0]}>The King of Limbs</MenuItem>
-          <MenuItem value={albums[1]}>OK Computer</MenuItem>
-          <ListSubheader>Portis Head</ListSubheader>
-          <MenuItem value={albums[2]}>Dummy</MenuItem>
-          <MenuItem value={albums[3]}>Third</MenuItem>
-        </Select>
-      </FormControl>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        aria-label="disabled tabs example"
+      >
+        {albumsTitle.map((el, index) => {
+          return (
+              <Tab
+                key={index}
+                className="btn-tab"
+                label={el}
+                onClick={() => setCurrentAlbum(albums[index])}
+              />
+          );
+        })}
+      </Tabs>
     </div>
   );
 }
